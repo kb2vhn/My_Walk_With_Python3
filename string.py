@@ -61,3 +61,5 @@ names = ['John', 'James', 'Chrissy']
 
 for name in names:
     print (welcome_message, name)
+
+# had an issue tring to push hope that installing the gnome keyring will fix it 
