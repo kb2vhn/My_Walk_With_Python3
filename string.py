@@ -37,6 +37,17 @@ print (alist[1:3])          # print the second element of the list to the third 
 print (alist[2:])           # print the third element till the end
 print (tinylist *2)         # print tinylist twice
 print (alist + tinylist)    # print both list concatenated
+print (alist, tinylist)     # not good it does not look that good on the screen
+
+for listToPrint in alist:   # nested loop prints rather interesting
+    for listTinyList in tinylist:
+        print(listToPrint, listTinyList)
+        
+for listToPrint in alist:   # this is what I wanted but there has to be a better way
+    print(listToPrint)
+for listTinyList in tinylist:
+    print(listTinyList)
+
 print (alist)               # print the original list to prove no data change
 print (tinylist)
 
