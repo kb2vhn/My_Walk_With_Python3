@@ -42,7 +42,7 @@ print (alist, tinylist)     # not good it does not look that good on the screen
 for listToPrint in alist:   # nested loop prints rather interesting
     for listTinyList in tinylist:
         print(listToPrint, listTinyList)
-        
+   
 for listToPrint in alist:   # this is what I wanted but there has to be a better way
     print(listToPrint)
 for listTinyList in tinylist:
@@ -80,4 +80,5 @@ for name in names:
     
 print ('\n')        # force a space after printing the list
 
+# I have to work on some different joins that will be next
 
