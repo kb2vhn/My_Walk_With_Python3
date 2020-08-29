@@ -58,7 +58,7 @@ who = 'John'
 how_many = 12
 
 print (who, 'bought', how_many, 'apples today!') # this is a bad way to concantante the string
-print ('{} bought {} apples today!'.format(who, how_many)) # this looks much better and remindes me of working with c++
+print ('{} bought {} apples today!\n'.format(who, how_many)) # this looks much better and remindes me of working with c++
 
 # print a simple message and iterate through a simple list
 welcome_message = 'Hello'
@@ -66,5 +66,7 @@ names = ['John', 'James', 'Chrissy']
 
 for name in names:
     print (welcome_message, name)
+    
+print ('\n')        # force a space after printing the list
 
 
