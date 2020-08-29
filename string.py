@@ -24,8 +24,7 @@ print (str[2:])         # print from the third character to the end of the strin
 print ((str +" ")*3)    # print the string with a space 3 times
 print (str + "TEST")    # add test to the string just for this print
 print (str)             # print the string again to show no changes to the string
-
-
+print(len(str))         # print the length of the string
 # python list are similar to an array but can hold different data types
 
 print("List" '\n')          # this looks a bit better but still not that good
@@ -45,8 +44,10 @@ for listToPrint in alist:   # nested loop prints rather interesting
    
 for listToPrint in alist:   # this is what I wanted but there has to be a better way
     print(listToPrint)
+    
 for listTinyList in tinylist:
     print(listTinyList)
+
 
 print (alist)               # print the original list to prove no data change
 print (tinylist)
@@ -82,3 +83,10 @@ print ('\n')        # force a space after printing the list
 
 # I have to work on some different joins that will be next
 
+# find the first na 
+# need to do a replace a some point
+word = "banana"
+i = word.find("na")
+print(i)
+print(type(word))
+print(dir(word))
