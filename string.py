@@ -15,7 +15,7 @@ a multi line string.""")        # print a multi-line string
 
 # simple string declared not very robust
 str = "hello world!"
-print ('\n')            # print new line this is an ugly way to do it too
+print ('\n')            # print new line this is an ugly way to do it too would be best to add the \n after the !
 print (str)             # print full string 
 print (str[0])          # print only the first character of the string
 print (str[2:7])        # print the 3rd to 5th (note that the 5th is not counted like normal computer math
@@ -27,7 +27,7 @@ print (str)             # print the string again to show no changes to the strin
 print(len(str))         # print the length of the string
 # python list are similar to an array but can hold different data types
 
-print("List" '\n')          # this looks a bit better but still not that good
+print("List" '\n')          # this looks a bit better but still not that good change to 'List\n'
 alist = ["abcd", 786, 2.23, "john", 70.2]
 tinylist = [123, "wood"]
 print (alist)               # print the list
@@ -54,7 +54,7 @@ print (tinylist)
 
 # Tuples are basicaly a read only list they cannot change once declared
 print ('\n')                # nice but why have extra lines
-print ("Tuple" '\n')        # not too bad but still not that good
+print ("Tuple" '\n')        # not too bad but still not that good better would be '\nTuple\n'
 tuple =('ABCD', 256, 5.56, 'John')
 tinytuple = (64, 'JJ')
 print (tuple)
@@ -84,9 +84,11 @@ print ('\n')        # force a space after printing the list
 # I have to work on some different joins that will be next
 
 # find the first na 
-# need to do a replace a some point
+
 word = "banana"
 i = word.find("na")
 print(i)
-print(type(word))
-print(dir(word))
+print(type(word))   # print the type that word is
+print(dir(word))    # print the class attrabutes that can be used with word
+
+# need to do a replace at some point
