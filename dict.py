@@ -1,6 +1,5 @@
 # John wood
 # Aug 30, 2020
-# This is a temp python file to play with things before they go to a category
 
 # Dictionaries
 # I am going to put a list of names into the dictonary and have it count the names

@@ -27,4 +27,22 @@ kn = k.split('#')
 for t in kn:
     print(t) # Now it is printing how I wanted it to ugly var's though
 
+# Aug 30, 2020
+# take a file and find the word that is used the most
+print('\nReadme most used word is:')
+fileOpen = open('README.md')
 
+wordCount = dict()
+for line in fileOpen:
+    words = line.split()
+    for word in words:
+        wordCount[word] = wordCount.get(word, 0) + 1
+
+mostUsedWord = None
+numberOfTimesUsed = None
+for word, count in wordCount.items():
+    if numberOfTimesUsed is None or count > numberOfTimesUsed:
+        mostUsedWord = word
+        numberOfTimesUsed = count
+
+print(mostUsedWord, numberOfTimesUsed)
