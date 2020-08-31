@@ -2,35 +2,30 @@
 # Aug 30, 2020
 # This is a temp python file to play with things before they go to a category
 
-# Dictionaries
-# I am going to put a list of names into the dictonary and have it count the names
-print('\n')
-namesToCount = dict()
-names = ['John', 'Chrissy', 'James', 'John']
-for name in names:
-    namesToCount[name] = namesToCount.get(name, 0) + 1
-print(namesToCount) 
+# Regular Expressions the reg ex gives me exactly what I want!
+import re
+try:
+    openFile = open('string.py') # this assumes that string.py is in the current working dir
+except:
+    print('Unable to locate file')
+    quit()
+for nfile in openFile:
+    nfile = nfile.strip()
+    if re.search('#', nfile):
+        print(nfile)
 
-# lets make it look better
-print('\nThis looks better I think\n')
-for key in namesToCount:
-    print(key, namesToCount[key])
 
-# take a file and find the word that is used the most
-print('\nReadme most used word\n')
-fileOpen = open('README.md')
+print('\nFind email addresses in a string')
+f = 'From john.wood@whatever.org sent by john.wood@whatever.net test string'
+ret = re.findall('From \S+@\S+', f)
+ret_1 = re.findall('From .*@([^ ]*)', f)
+print(ret) # find from email address in the f string
+print('\nFrom host',ret_1)
 
-wordCount = dict()
-for line in fileOpen:
-    words = line.split()
-    for word in words:
-        wordCount[word] = wordCount.get(word, 0) + 1
+ret2 = re.findall('^From (\S+@\S+)', f) # return just the from address
+print(ret2)
 
-mostUsedWord = None
-numberOfTimesUsed = None
-for word, count in wordCount.items():
-    if numberOfTimesUsed is None or count > numberOfTimesUsed:
-        mostUsedWord = word
-        numberOfTimesUsed = count
-
-print(mostUsedWord, numberOfTimesUsed)
+ret3 = re.findall('\S+@\S+', f) # return all email addresses in the string
+ret_3 = re.findall('@([^ ]*)', f)
+print(ret3)
+print('\nall host',ret_3)

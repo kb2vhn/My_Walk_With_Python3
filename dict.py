@@ -8,12 +8,20 @@ namesToCount = dict()
 names = ['John', 'Chrissy', 'James', 'John']
 for name in names:
     namesToCount[name] = namesToCount.get(name, 0) + 1
-print(namesToCount) 
+print(namesToCount) # any order will be displayed
+
 
 # lets make it look better
 print('\nThis looks better I think\n')
 for key in namesToCount:
     print(key, namesToCount[key])
+
+print('\nAlphabetical order:')
+for key, value in sorted(namesToCount.items()):
+    print(key, value)
+
+print('\nUsing a Lambda')
+print( sorted([(key, value) for key,value in namesToCount.items()]))
 
 # take a file and find the word that is used the most
 print('\nReadme most used word\n')

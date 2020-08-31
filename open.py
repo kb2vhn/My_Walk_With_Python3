@@ -28,6 +28,16 @@ for t in kn:
     print(t) # Now it is printing how I wanted it to ugly var's though
 
 # Aug 30, 2020
+# Regular Expressions the reg ex gives me exactly what I want!
+import re
+
+openFile = open('string.py') # this assumes that string.py is in the current working dir
+for nfile in openFile:
+    nfile = nfile.strip()
+    if re.search('#', nfile):
+        print(nfile)
+
+# Aug 30, 2020
 # take a file and find the word that is used the most
 print('\nReadme most used word is:')
 fileOpen = open('README.md')
@@ -40,7 +50,7 @@ for line in fileOpen:
 
 mostUsedWord = None
 numberOfTimesUsed = None
-for word, count in wordCount.items():
+for word, count in wordCount.items(): # itmes uses key, value so var names can be anything
     if numberOfTimesUsed is None or count > numberOfTimesUsed:
         mostUsedWord = word
         numberOfTimesUsed = count
