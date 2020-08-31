@@ -13,9 +13,13 @@ from noaa_sdk import noaa # pip install noaa-sdk
 n = noaa.NOAA()
 res = n.get_forecasts('14810', 'US', True)
 for i in res:
+    #print(i)
     print(re.findall('([0-9]?[0-9]-[0-9]?[0-9])T([0-2]?[0-9]:[0-5]?[0-9])', i['startTime']), 
     'Temp', i['temperature'], 'Wind', i['windSpeed'], 'Direction', i['windDirection'], 
     'Forecast', i['shortForecast']) # I did a regex on the start time otherwise it looks like this
                                     # for the time 2020-09-07T03:00:00-04:00 this way it shows
-                                    # the date and time 08-31 17:00 easier for me to look at
-    #print(i)
+                                    # the date and time 08-31 17:00 easier for me to look at 
+    
+     
+    
+    
