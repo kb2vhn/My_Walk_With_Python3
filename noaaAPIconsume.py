@@ -2,7 +2,7 @@
 # Aug 31, 2020
 
 # just pulling in my weather returning the date, time, temp, wind, wind direction
-# and forecast # need to find the % for the forecast 
+# and forecast 
 # Web Services
 
 # this takes a minute for it to pull down everything but lots that can be done
